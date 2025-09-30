@@ -1,211 +1,234 @@
-Fifa-20-Machine-Learning-Clustering-
-FIFA20 CLUSTERING
-TASK 1
-PREPARE A COMPLETE DATA ANALYSIS REPORT ON THE GIVEN DATA.
-Task 2
-EXPLORE FOOTBALL SKILLS AND CLUSTER FOOTBALL PLAYERS BASED ON THEIR ATTRTIBUDES.
-Task3
-EXPLORE THE DATA AND ATTEMPTS ALL THE BELOW ASKED QUESTION IN A STEP BY STEP MANNER:
-Prepare a rank ordered list of top 10 countries with most players. Which countries are producing the most footballers that play at this level?
-Plot the distribution of overall rating vs. age of players. Interpret what is the age after which a player stops improving?
-Which type of offensive players tends to get paid the most: the striker, the right-winger, or the left-winger?
-INTRODUCTION OF PROJECT:
+# Fifa-20-Machine-Learning-Clustering-
+# FIFA20 CLUSTERING 
+# <b>TASK 1
+#### <b>PREPARE A COMPLETE DATA ANALYSIS REPORT ON THE GIVEN DATA.
+# <b>Task 2
+#### <b>EXPLORE FOOTBALL SKILLS AND CLUSTER FOOTBALL PLAYERS BASED ON THEIR ATTRTIBUDES.
+
+
+# <b>Task3
+#### <b>EXPLORE THE DATA AND ATTEMPTS ALL THE BELOW ASKED QUESTION IN A STEP BY STEP MANNER:
+
+- <b> Prepare a rank ordered list of top 10 countries with most players. Which countries are producing the most footballers that play at this level?
+- <b>Plot the distribution of overall rating vs. age of players. Interpret what is the age after which a player stops improving?
+- <b>Which type of offensive players tends to get paid the most: the striker, the right-winger, or the left-winger? 
+
+
+## INTRODUCTION OF PROJECT:
+
+
+![image](https://images.sftcdn.net/images/t_app-cover-l,f_auto/p/21286636-f4a9-47f3-a259-61469a3ddd2b/3377423835/fifa-20-1.jpg)
+
+
+
 FIFA 20 is a football simulation video game published by Electronic Arts as part of the FIFA series. It is the 27th installment in the FIFA series, and was released on 27 September 2019 for Microsoft Windows, PlayStation 4, Xbox One, and Nintendo Switch.
 
-BUISNESS CASE: WITH THE FIFA20 DATASET WE NEED TO CLUSTER THE PLAYER BY THEIR SKILL INTO CERTAIN GROUP
-TASK: CLUSTERING
-DOMAIN ANALYSIS OF FEATURE:
-SOFIFA-ID: Id of fifa20 player
 
-PLAYER URL:A URL (Uniform Resource Locator) is a unique identifier used to locate a resource on the Internet. It is also referred to as a web address.
+### BUISNESS CASE: WITH THE FIFA20 DATASET WE NEED TO CLUSTER THE PLAYER BY THEIR SKILL INTO CERTAIN GROUP
 
-SHORT NAME:Short or nick name, Name of player
+#### TASK: CLUSTERING
 
-LONG NAME:Full name of player
+## DOMAIN ANALYSIS OF FEATURE:
 
-AGE:Age in years
+* SOFIFA-ID: Id of fifa20 player
 
-DOB:Date of birth of player
+* PLAYER URL:A URL (Uniform Resource Locator) is a unique identifier used to locate a resource on the Internet. It is also referred to as a web address.
 
-HEIGHT CM:Player height in centimeter
+* SHORT NAME:Short or nick name, Name of player
 
-WEIGHT KG:Player body weight
+* LONG NAME:Full name of player
 
-NATIONALITY:Nationality is the legal status, which represents the country from which an individual belongs.
+* AGE:Age in years
 
-CLUB:A group of people formed for the purpose of playing sports.
+* DOB:Date of birth of player
 
-OVERALL:The OVR (Overall) is made up of all the player's in game stats.
+* HEIGHT CM:Player height in centimeter
 
-POTENTIAL:The potential rating is the rating they will achieve for sure during the FIFA 20 career model.
+* WEIGHT KG:Player body weight
 
-VALUE EUR:The value of player in euro.
+* NATIONALITY:Nationality is the legal status, which represents the country from which an individual belongs.
 
-WAGE EUR:A living wage is the amount of income needed to provide an player with a basic but socially acceptable standard of living.
+* CLUB:A group of people formed for the purpose of playing sports.
 
-PLAYER POSITIONS:Positions indicate approximately where each player should be lined up prior to the start of a play.
+* OVERALL:The OVR (Overall) is made up of all the player's in game stats.
 
-PREFEERED FOOT:Footedness may refer to the foot a player uses to kick with the greatest force and skill.
+* POTENTIAL:The potential rating is the rating they will achieve for sure during the FIFA 20 career model.
 
-INTERNATIONAL REPUTATION:International reputation is rated with 1-5 stars.
+* VALUE EUR:The value of player in euro.
 
-WEAK FOOT:A player's foot (left or right) that is weaker than their preferred foot. A player's attribute rated between 1 to 5 which specifies the shot power and ball control for the other foot of that player than his preferred foot's.
+* WAGE EUR:A living wage is the amount of income needed to provide an player with a basic but socially acceptable standard of living.
 
-SKILL MOVES:Skill moves, it is assigned a number between 1 (least complex) and 5 (most complex). Players with higher skills are able to perform more complex moves.
+* PLAYER POSITIONS:Positions indicate approximately where each player should be lined up prior to the start of a play.
 
-WORK RATE:Work rates are how hard the player works on each end of the field.
+* PREFEERED FOOT:Footedness may refer to the foot a player uses to kick with the greatest force and skill.
 
-BODY-TYPE:A custom body type and character of football player.
+* INTERNATIONAL REPUTATION:International reputation is rated with 1-5 stars.
 
-REAL FACE:Face scan of real football player if it 'yes' then the character is look super realistic.
+* WEAK FOOT:A player's foot (left or right) that is weaker than their preferred foot. A player's attribute rated between 1 to 5 which specifies the shot power and ball control for the other foot of that player than his preferred foot's.
 
-RELEASE CLAUSE EUR:A release clause is the minimum amount of money you're willing to accept for that player.
+* SKILL MOVES:Skill moves, it is assigned a number between 1 (least complex) and 5 (most complex). Players with higher skills are able to perform more complex moves.
 
-PLAYER TAGS:The tags of player is identified the player skills, like [Dribbler, Distance shooter, Crosser, Speedster]
+* WORK RATE:Work rates are how hard the player works on each end of the field.
 
-TEAM POSITION:The player’s positioning on the field
+* BODY-TYPE:A custom body type and character of football player.
 
-TEAM JERSEY NUMBER:The number on the back of a football player's jersey is to identify a specific player.
+* REAL FACE:Face scan of real football player if it 'yes' then the character is look super realistic.
 
-LONED FROM:It's a temporary restriction placed on player due to their club being short of players.
+* RELEASE CLAUSE EUR:A release clause is the minimum amount of money you're willing to accept for that player.
 
-JOINED:Joining date of club
+* PLAYER TAGS:The tags of player is identified the player skills, like [Dribbler, Distance shooter, Crosser, Speedster]
 
-CONTRACT VALID UNTIL:The end year of contract of players.
+* TEAM POSITION:The player’s positioning on the field
 
-NATION POSITION:Nation position is similar to the team position of players.
+* TEAM JERSEY NUMBER:The number on the back of a football player's jersey is to identify a specific player.
 
-NATION JERSEY NUMBER:Jersey number of player.
+* LONED FROM:It's a temporary restriction placed on player due to their club being short of players.
 
-PACE:Fastest pace of player, striker or winger
+* JOINED:Joining date of club
 
-SHOOTING:Shooting is hitting the ball in an attempt to score a goal. It is usually done using the feet or head.
+* CONTRACT VALID UNTIL:The end year of contract of players.
 
-PASSING:The purpose of passing is to keep possession of the ball by maneuvering it on the ground between different players with the objective of advancing it up the playing field.
+* NATION POSITION:Nation position is similar to the team position of players.
 
-DRIBLING:Dribbling Is Maneuvering A Ball By One Player While Moving In A Given Direction, Avoiding Problems’ Attempts To Intercept The Ball.
+* NATION JERSEY NUMBER:Jersey number of player.
 
-DEFENDING:Defending is most relate to the defender to stop the attack
+* PACE:Fastest pace of player, striker or winger
 
-PHYSIC:Physic in player means intensity and their effort.
+* SHOOTING:Shooting is hitting the ball in an attempt to score a goal. It is usually done using the feet or head.
 
-GK DIVING:Goal keeper diving to save a shot.
+* PASSING:The purpose of passing is to keep possession of the ball by maneuvering it on the ground between different players with the objective of advancing it up the playing field.
 
-GK HANDLING:As a goalkeeper, you are allowed to handle the ball with your hands within your penalty area.
+* DRIBLING:Dribbling Is Maneuvering A Ball By One Player While Moving In A Given Direction, Avoiding Problems’ Attempts To Intercept The Ball.
 
-GK KICKING:The goalkeeper is the player, who usually kicks the ball to resume play, and they either kick it short to a teammate or it is kicked extremely hard to travel a long distance.
+* DEFENDING:Defending is most relate to the defender to stop the attack
 
-GK REFLEX:Ability to react quickly.
+* PHYSIC:Physic in player means intensity and their effort.
 
-GK SPEED:Speed of goal keeper.
+* GK DIVING:Goal keeper diving to save a shot.
 
-GK POSITIONING:Position of goal keeper is around only goal posts.
+* GK HANDLING:As a goalkeeper, you are allowed to handle the ball with your hands within your penalty area.
 
-PLAYER TRAITS:A player’s traits are actions that he will be more likely to perform in matches.
+* GK KICKING:The goalkeeper is the player, who usually kicks the ball to resume play, and they either kick it short to a teammate or it is kicked extremely hard to travel a long distance.
 
-ATTACKING CROSSING:The aim of a cross is to create the easiest possible scenario for the attacking player to score a goal.
+* GK REFLEX:Ability to react quickly.
 
-ATTACKING FINISHING:Create a attack on field to score a goal
+* GK SPEED:Speed of goal keeper.
 
-ATTACKING HEADING ACCURACY:One of the fundamental principles of the attacking header is to head the ball downwards.
+* GK POSITIONING:Position of goal keeper is around only goal posts.
 
-ATTACKING SHORT PASSING:Short passes of ball to score a goal
+* PLAYER TRAITS:A player’s traits are actions that he will be more likely to perform in matches.
 
-ATTACKING VOLLEYS:A volley is an air-borne strike in association football, where a player's foot meets and directs the ball in an angled direction before it has time to reach the ground.
+* ATTACKING CROSSING:The aim of a cross is to create the easiest possible scenario for the attacking player to score a goal.
 
-SKILL DRIBBLING:The score of dribbling skill with football
+* ATTACKING FINISHING:Create a attack on field to score a goal
 
-SKILL CURVE:The curve of football at the time of goal
+* ATTACKING HEADING ACCURACY:One of the fundamental principles of the attacking header is to head the ball downwards.
 
-SKILL FK ACCURACY:It stands for field goal. It is when a player kicks a ball through the uprights from a set distance.
+* ATTACKING SHORT PASSING:Short passes of ball to score a goal
 
-SKILL LONG PASSING:The long passing skill score of the player
+* ATTACKING VOLLEYS:A volley is an air-borne strike in association football, where a player's foot meets and directs the ball in an angled direction before it has time to reach the ground.
 
-SKILL BALL CONTROL:The ball control of the player at playing time
+* SKILL DRIBBLING:The score of dribbling skill with football
 
-MOVEMENT ACCERLATION:how quickly player can increase your velocity towards maximum speed.
+* SKILL CURVE:The curve of football at the time of goal
 
-MOVEMENT SPRINT SPPED:Sprinting speed score of the player.
+* SKILL FK ACCURACY:It stands for field goal. It is when a player kicks a ball through the uprights from a set distance.
 
-MOVEMENT AGILITY:Agility is the ability to move quickly and easily, including moving in different directions without losing balance
+* SKILL LONG PASSING:The long passing skill score of the player
 
-MOVEMENT REACTION:The score of the quick relation of player.
+* SKILL BALL CONTROL:The ball control of the player at playing time
 
-MOVEMENT BALANCE:Balance is the ability to control your body in its own space.
+* MOVEMENT ACCERLATION:how quickly player can increase your velocity towards maximum speed.
 
-SHOT POWER:Power generates to score a goal.
+* MOVEMENT SPRINT SPPED:Sprinting speed score of the player.
 
-POWER JUMPING:The jumping ability of the player on field.
+* MOVEMENT AGILITY:Agility is the ability to move quickly and easily, including moving in different directions without losing balance
 
-POWER STAMINA:Stamina of player on filed.
+* MOVEMENT REACTION:The score of the quick relation of player.
 
-POWER STRENGTH:Strength of player on field.
+* MOVEMENT BALANCE:Balance is the ability to control your body in its own space.
 
-POWER LONG SHOT:Total no of power long shot of football.
+* SHOT POWER:Power generates to score a goal.
 
-MENTAILITY AGGRESSION:Aggression is a characteristic that can have many negative as well as positive effects on performance of player.
+* POWER JUMPING:The jumping ability of the player on field.
 
-MENTALITY INTERCEPTION:Interception is thrown the possession of the ball is given to the other team.
+* POWER STAMINA:Stamina of player on filed.
 
-MENTALITY POSITIONING:The mentality positioning of player determines how defensive or attacking your players set out to play.
+* POWER STRENGTH:Strength of player on field.
 
-MENTALITY VISION:The vision/mindset of player on filed.
+* POWER LONG SHOT:Total no of power long shot of football.
 
-MENTALITIES PENALTIES:When a player commits an infraction against the rules of the game a foul will be called and a penalty will be assessed.
+* MENTAILITY AGGRESSION:Aggression is a characteristic that can have many negative as well as positive effects on performance of player.
 
-MENTALITY COMPOSURE:Composure stands for: Recognize–Regroup–Refocus. The first step is to Recognize that you are dwelling on the mistake, which limits your ability focus on the next play.
+* MENTALITY INTERCEPTION:Interception is thrown the possession of the ball is given to the other team.
 
-DEFENDING MAKING:When your team is defending, you want to make the field small and the options of the other team limited.
+* MENTALITY POSITIONING:The mentality positioning of player determines how defensive or attacking your players set out to play.
 
-DEFENDING STANDING TACKLE:Defending standing Tackle of the player to get a ball on filed.
+* MENTALITY VISION:The vision/mindset of player on filed.
 
-DEFENDING SLIDING TACKLE:Defending sliding tackle of player to get a ball.
+* MENTALITIES PENALTIES:When a player commits an infraction against the rules of the game a foul will be called and a penalty will be assessed.
 
-GOALKEEPING DIVING:Goal keeper diving to save a goal.
+* MENTALITY COMPOSURE:Composure stands for: Recognize–Regroup–Refocus. The first step is to Recognize that you are dwelling on the mistake, which limits your ability focus on the next play.
 
-GOALKEEPING HANDLING:Handle the ball with your hands within your penalty area.
+* DEFENDING MAKING:When your team is defending, you want to make the field small and the options of the other team limited.
 
-GOALKEEPING KICKING:A kick taken by the goalkeeper when the attacking team has kicked the ball over the goal line.
+* DEFENDING STANDING TACKLE:Defending standing Tackle of the player to get a ball on filed.
 
-GOALKEEPING POSITIONING:A Positioning of player to save the goal.
+* DEFENDING SLIDING TACKLE:Defending sliding tackle of player to get a ball.
 
-GOALKEEPING REFLEX:The reflex of goalkeeper and players.
+* GOALKEEPING DIVING:Goal keeper diving to save a goal.
 
-THE REMAINING FEATURE IS THE ABBREVATION OF FOOTBALL POSITION SCORE:
-LS:Long snapper or left striker.
-ST:Striker
-RS:Right striker
-LW:Left sided wingers.
-LF:Left forward
-CF:Center forward
-RF:Right forward
-RW:The RW is usually on the right end of the attacking trident, with the Striker and Left Winger, which mainly contributes to the team in terms of goals and assists.
-LAM:Left attacking midfield
-CAM:Center attacking midfield
-RAM:Right attacking midfield
-LM:Left midfield
-LCM:Left center midfield
-CM:Center Midfield
-RCM:Right center midfield
-RM:Right midfield
-LWB:Left Wing Back
-LDM:Left defensive midfield
-CDM:Center defensive midfield
-Right defensive midfield
-RWB:Right wing back
-LB:Left back
-LCB:Left center back
-CB:Center back
-RCB:Right center back
-DATA PROCESSING & FEATURE ENGINEERING
-Impute Missing value with median because feature is not normal distributed
-Handling categorical data with mannual encoding
-Handling outlier with Empherical rule and IQR.
-Scaling the data with the help of min-max scaler
-FEATURE SELECTION
-Drop unique and constant column
-Remove highly correalted feature, In this data lots of highly correlated feature is available.
-Their is no duplicate is present.
-At last apply PCA to reduce the dimension of feature.
-MODEL CREATION AND EVALUATION
-He we are use K-means algorithm to make cluster/group.
+* GOALKEEPING HANDLING:Handle the ball with your hands within your penalty area.
+
+* GOALKEEPING KICKING:A kick taken by the goalkeeper when the attacking team has kicked the ball over the goal line.
+
+* GOALKEEPING POSITIONING:A Positioning of player to save the goal.
+
+* GOALKEEPING REFLEX:The reflex of goalkeeper and players.
+
+### THE REMAINING FEATURE IS THE ABBREVATION OF FOOTBALL POSITION SCORE:
+* LS:Long snapper or left striker.
+* ST:Striker
+* RS:Right striker
+* LW:Left sided wingers.
+* LF:Left forward
+* CF:Center forward
+* RF:Right forward
+* RW:The RW is usually on the right end of the attacking trident, with the Striker and Left Winger, which mainly contributes to the team in terms of goals and assists.
+* LAM:Left attacking midfield
+* CAM:Center attacking midfield
+* RAM:Right attacking midfield
+* LM:Left midfield
+* LCM:Left center midfield
+* CM:Center Midfield
+* RCM:Right center midfield
+* RM:Right midfield
+* LWB:Left Wing Back
+* LDM:Left defensive midfield
+* CDM:Center defensive midfield
+* Right defensive midfield
+* RWB:Right wing back
+* LB:Left back
+* LCB:Left center back
+* CB:Center back
+* RCB:Right center back
+
+![image](https://user-images.githubusercontent.com/101791322/180654758-904fd0d1-9dbe-48e8-a7b3-4bcbed2f1a4d.png)
+
+
+
+## DATA PROCESSING & FEATURE ENGINEERING
+* Impute Missing value with median because feature is not normal distributed
+* Handling categorical data with mannual encoding
+* Handling outlier with Empherical rule and IQR.
+* Scaling the data with the help of min-max scaler
+
+
+## FEATURE SELECTION
+* Drop unique and constant column
+* Remove highly correalted feature, In this data lots of highly correlated feature is available.
+* Their is no duplicate is present.
+* At last apply PCA to reduce the dimension of feature.
+
+## MODEL CREATION AND EVALUATION
+* He we are use K-means algorithm to make cluster/group.
