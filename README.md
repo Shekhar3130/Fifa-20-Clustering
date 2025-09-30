@@ -1,3 +1,4 @@
+Fifa-20-Machine-Learning-Clustering-
 FIFA20 CLUSTERING
 TASK 1
 PREPARE A COMPLETE DATA ANALYSIS REPORT ON THE GIVEN DATA.
@@ -9,8 +10,6 @@ Prepare a rank ordered list of top 10 countries with most players. Which countri
 Plot the distribution of overall rating vs. age of players. Interpret what is the age after which a player stops improving?
 Which type of offensive players tends to get paid the most: the striker, the right-winger, or the left-winger?
 INTRODUCTION OF PROJECT:
-image
-
 FIFA 20 is a football simulation video game published by Electronic Arts as part of the FIFA series. It is the 27th installment in the FIFA series, and was released on 27 September 2019 for Microsoft Windows, PlayStation 4, Xbox One, and Nintendo Switch.
 
 BUISNESS CASE: WITH THE FIFA20 DATASET WE NEED TO CLUSTER THE PLAYER BY THEIR SKILL INTO CERTAIN GROUP
@@ -198,8 +197,6 @@ LB:Left back
 LCB:Left center back
 CB:Center back
 RCB:Right center back
-image
-
 DATA PROCESSING & FEATURE ENGINEERING
 Impute Missing value with median because feature is not normal distributed
 Handling categorical data with mannual encoding
